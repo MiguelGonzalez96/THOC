@@ -16,11 +16,21 @@ ul, ol, dl {
 	margin:0;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6{
 	margin-top:0;	/* la eliminació del marge superior resol un problema que fa que els marges escapin de l'etiqueta div contenidora. El marge inferior restant el mantindrà separat dels elements que segueixin. */
 	padding-right:15px;
 	padding-left:15px; 
 }
+
+p{
+	text-align: justify;
+	color: #fff;
+	margin-top:0;	/* la eliminació del marge superior resol un problema que fa que els marges escapin de l'etiqueta div contenidora. El marge inferior restant el mantindrà separat dels elements que segueixin. */
+	padding-right:15px;
+	padding-left:15px; 
+}
+
+
 /* Aquest selector elimina el marc blau predeterminat que es mostra en alguns navegadors al voltant d'una imatge quan aquesta està envoltada per un vincle. */
 a img { 
 	border:none;
@@ -32,12 +42,6 @@ a:link {
 	text-decoration:underline; /* tret de que s'apliquin estils als links per que tinguin un aspecte exclusiu, es recomanable proporcionar subratllats per facilitar una identificació visual ràpida */
 }
 
-a:visited {
-	color:white;
-	text-decoration:underline;
-	border-style:dashed;
-	border: 5px solid
-}
 
 /* Aquest grup de selectors proporcionarà a un usuari que navegui mitjançant el teclat la mateixa experiència de hover (pas per sobre) que experimenta un usuari que utilitza un ratolí. */
 a:hover, a:active, a:focus { 
@@ -55,18 +59,18 @@ a:hover, a:active, a:focus {
 .header {
 	/*~~background:url(img/button-menu.png);
 	background-repeat:repeat-x;~~*/
-	height:200px
+	height: 200px;
 }
 
 
 /* ~~ Columnes del disseny ~~ */
-.sidebar1 {
+/*.sidebar1 {
 	float:left;
 	width:100%;
 	background:#0d162b;
 	padding-bottom:10px;
-	margin-top:10px
-}
+	margin-top:10px;
+}*/
 
 .content {
 
@@ -92,12 +96,22 @@ ul.nav {
 }
 
 ul.nav li {
-	border-bottom:1px solid #666; /* això crea la separació dels botons */
+	a:link a:visited 
+	{
+		color:white;
+		text-decoration:underline;
+		border-style:solid;
+		border: 50px solid r;
+		padding: 50px 25px;
+		text-align: center;
+		text-decoration: none;
+		display:block;
+	}
 }
 
 ul.nav a, ul.nav a:visited { /* al agrupar aquests selectors, s'asegurarà de que els vincles mantinguin l'aspecte de botó fins i tot   després de visitar-se */
 	padding:5px 5px 5px 15px;
-	display:inline; /* això assigna propietats de bloc al vincle, fet que provoca que s'empleni tot el LI que el conté. Això provoca que tota l'àrea reaccioni a un clic de ratolí. */
+	display:block; /* això assigna propietats de bloc al vincle, fet que provoca que s'empleni tot el LI que el conté. Això provoca que tota l'àrea reaccioni a un clic de ratolí. */
 	width:160px;  /* l'amplada fa que es pugui fer clic en tot el botó per IE6. Es pot eliminar si no es necessari proporcionar compatibilitat amb IE6. */
 	text-decoration:none;
 	background:#0D162B;
