@@ -83,8 +83,12 @@ ul.nav {
 	list-style:none; /* això elimina el marcador de llista */
 	border-top:1px solid #000; /* això crea el marc superior dels vincles (els altres es situen utilitzant un marc inferior en el LI) */
 	margin-bottom:15px; /* això crea l'espai entre la navegació i el contingut posicionat a sota */
+	.nav > li {
+		float:left;
+	}
   table, th {
   border:1px solid black;
+  
 }	
 
       
@@ -96,7 +100,7 @@ ul.nav li {
 
 ul.nav a, ul.nav a:visited { /* al agrupar aquests selectors, s'asegurarà de que els vincles mantinguin l'aspecte de botó fins i tot   després de visitar-se */
 	padding:5px 5px 5px 15px;
-	display:block; /* això assigna propietats de bloc al vincle, fet que provoca que s'empleni tot el LI que el conté. Això provoca que tota l'àrea reaccioni a un clic de ratolí. */
+	display:inline; /* això assigna propietats de bloc al vincle, fet que provoca que s'empleni tot el LI que el conté. Això provoca que tota l'àrea reaccioni a un clic de ratolí. */
 	width:160px;  /* l'amplada fa que es pugui fer clic en tot el botó per IE6. Es pot eliminar si no es necessari proporcionar compatibilitat amb IE6. */
 	text-decoration:none;
 	background:#C6D580;
