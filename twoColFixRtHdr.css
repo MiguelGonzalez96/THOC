@@ -27,6 +27,7 @@ h1, h2, h3, h4, h5, h6{
 	margin-top:0;	/* la eliminació del marge superior resol un problema que fa que els marges escapin de l'etiqueta div contenidora. El marge inferior restant el mantindrà separat dels elements que segueixin. */
 	padding-right:15px;
 	padding-left:15px; 
+	color: #fff;
 }
 
 p{
@@ -36,6 +37,10 @@ p{
 	padding-right:15px;
 	padding-left:15px; 
 }
+
+.menu
+
+
 
 
 /* Aquest selector elimina el marc blau predeterminat que es mostra en alguns navegadors al voltant d'una imatge quan aquesta està envoltada per un vincle. */
@@ -108,25 +113,27 @@ ul.nav li {
 	}
 	a:visited, a:active {
 		background-color:#50BFDE;
+
 	  }
 }
 
 ul.nav a, ul.nav a:visited { /* al agrupar aquests selectors, s'asegurarà de que els vincles mantinguin l'aspecte de botó fins i tot   després de visitar-se */
-	padding:5px 5px 5px 15px;
+	
 	display:inline-block; /* això assigna propietats de bloc al vincle, fet que provoca que s'empleni tot el LI que el conté. Això provoca que tota l'àrea reaccioni a un clic de ratolí. */
 	width:160px;  /* l'amplada fa que es pugui fer clic en tot el botó per IE6. Es pot eliminar si no es necessari proporcionar compatibilitat amb IE6. */
 	text-decoration:none;
-	
+	text-align: center;
 	padding:10px 10px;
+
 	border:2px #50BFDE;
+	border-collapse: collapse;
 	color:white;
-	background:#0D162B;
+	background-color:#50BFDE;
 }
 
-ul.nav, ul.nav, a:hover, ul.nav a:focus { /* això canvia el color de fons i del text tant per usuaris que naveguin amb ratolí com pels que ho facin amb teclat */
+ ul.nav a:hover, ul.nav a:focus { /* això canvia el color de fons i del text tant per usuaris que naveguin amb ratolí com pels que ho facin amb teclat */
 	background:#0D162B;
-	border:2px #50BFDE;
-	color:white;
+	color:#0D162B;
 }
 
 /* ~~ Peu de pàgina ~~ */
