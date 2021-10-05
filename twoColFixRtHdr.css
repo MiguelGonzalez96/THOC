@@ -33,8 +33,10 @@ a:link {
 }
 
 a:visited {
-	color:#6E6C64;
+	color:white;
 	text-decoration:underline;
+	border-style:dashed;
+	border: 5px solid
 }
 
 /* Aquest grup de selectors proporcionarà a un usuari que navegui mitjançant el teclat la mateixa experiència de hover (pas per sobre) que experimenta un usuari que utilitza un ratolí. */
@@ -45,7 +47,7 @@ a:hover, a:active, a:focus {
 /* ~~ Contenidor d'amplada fixa que envolta el contingut de la pàgina ~~ */
 .container {
 	width:960px;
-	background:#FFF;
+	background: #0d162b;;
 	margin:0 auto; /* el valor automàtic dels costats, juntament a l'amplada, centra el disseny */
 }
 
@@ -61,7 +63,7 @@ a:hover, a:active, a:focus {
 .sidebar1 {
 	float:left;
 	width:100%;
-	background:#EADCAE;
+	background:#0d162b;
 	padding-bottom:10px;
 	margin-top:10px
 }
@@ -81,17 +83,12 @@ a:hover, a:active, a:focus {
 /* ~~ Estils de la llista de navegació ~~ */
 ul.nav {
 	list-style:none; /* això elimina el marcador de llista */
-	border-top:1px solid #000; /* això crea el marc superior dels vincles (els altres es situen utilitzant un marc inferior en el LI) */
-	margin-bottom:15px; /* això crea l'espai entre la navegació i el contingut posicionat a sota */
-	.nav > li {
-		float:left;
-	}
-  table, th {
-  border:1px solid black;
-  
-}	
+	border-top:1px solid rgb(201, 191, 191); /* això crea el marc superior dels vincles (els altres es situen utilitzant un marc inferior en el LI) */
+	margin-bottom:15px; /* això crea l'espai entre la navegació i el contingut posicionat a sota */	     
+}
 
-      
+.nav > li {
+	float:left;
 }
 
 ul.nav li {
@@ -103,12 +100,12 @@ ul.nav a, ul.nav a:visited { /* al agrupar aquests selectors, s'asegurarà de qu
 	display:inline; /* això assigna propietats de bloc al vincle, fet que provoca que s'empleni tot el LI que el conté. Això provoca que tota l'àrea reaccioni a un clic de ratolí. */
 	width:160px;  /* l'amplada fa que es pugui fer clic en tot el botó per IE6. Es pot eliminar si no es necessari proporcionar compatibilitat amb IE6. */
 	text-decoration:none;
-	background:#C6D580;
+	background:#0D162B;
 }
 
 ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* això canvia el color de fons i del text tant per usuaris que naveguin amb ratolí com pels que ho facin amb teclat */
-	background:#ADB96E;
-	color:#FFF;
+	background:#0D162B;
+	color:#50BFDE;
 }
 
 /* ~~ Peu de pàgina ~~ */
