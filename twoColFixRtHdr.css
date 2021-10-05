@@ -5,7 +5,7 @@ body {
 	background:#fff;
 	margin:0;
 	padding:0;
-	background-color:rgba(29,46,96,0.8);
+	background-color:#0D162B;
 }
 
 /* ~~ Selectors ~~ */
@@ -28,7 +28,7 @@ a img {
 
 /* ~~ L'aplicación d'estilo als links de la pàgina ha d'apareixer en aquest ordre (inclosos els selectors que creen l'efecte hover -pas per sobre-). ~~ */
 a:link {
-	color:#42413C;
+	color:#50BFDE;
 	text-decoration:underline; /* tret de que s'apliquin estils als links per que tinguin un aspecte exclusiu, es recomanable proporcionar subratllats per facilitar una identificació visual ràpida */
 }
 
@@ -60,7 +60,7 @@ a:hover, a:active, a:focus {
 /* ~~ Columnes del disseny ~~ */
 .sidebar1 {
 	float:left;
-	width:180px;
+	width:100%;
 	background:#EADCAE;
 	padding-bottom:10px;
 	margin-top:10px
@@ -81,8 +81,13 @@ a:hover, a:active, a:focus {
 /* ~~ Estils de la llista de navegació ~~ */
 ul.nav {
 	list-style:none; /* això elimina el marcador de llista */
-	border-top:1px solid #666; /* això crea el marc superior dels vincles (els altres es situen utilitzant un marc inferior en el LI) */
+	border-top:1px solid #000; /* això crea el marc superior dels vincles (els altres es situen utilitzant un marc inferior en el LI) */
 	margin-bottom:15px; /* això crea l'espai entre la navegació i el contingut posicionat a sota */
+  table, th {
+  border:1px solid black;
+}	
+
+      
 }
 
 ul.nav li {
