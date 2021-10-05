@@ -38,7 +38,11 @@ p{
 	padding-left:15px; 
 }
 
-.menu
+.menu{
+	width:900px;
+	margin: 0 auto;
+
+}
 
 
 
@@ -110,11 +114,18 @@ ul.nav li {
 		display:inline-block;
 		margin-left: 84px;
 		
-	}
+}
 	a:visited, a:active {
 		background-color:#50BFDE;
 
 	  }
+
+nav ul li{
+
+	list-style: none;
+	margin: 75px;
+	padding: 25px 0;
+	float: left;
 }
 
 ul.nav a, ul.nav a:visited { /* al agrupar aquests selectors, s'asegurarà de que els vincles mantinguin l'aspecte de botó fins i tot   després de visitar-se */
