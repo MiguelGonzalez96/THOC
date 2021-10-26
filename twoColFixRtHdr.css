@@ -1,16 +1,16 @@
 @charset "utf-8";
 @font-face{
-	font-family: play;
-	src:url('Play-Bold.ttf');	
+	font-family:"play";
+	src:url(fonts/Play-Bold.ttf);	
 }
 
 body {
 	font:100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-	background:#fff;
+	background:url(img/banner\ azul.PNG);
 	margin:0;
 	padding:0;
-	background-color:#0D162B;
-	font-family: Play-Bold;
+	font-family:Arial, Helvetica, sans-serif;
+	width: 100%;
 	
 }
 
@@ -39,7 +39,7 @@ p{
 }
 
 .menu{
-	width:900px;
+	width:100%;
 	margin: 0 auto;
 
 }
@@ -54,7 +54,7 @@ a img {
 
 /* ~~ L'aplicación d'estilo als links de la pàgina ha d'apareixer en aquest ordre (inclosos els selectors que creen l'efecte hover -pas per sobre-). ~~ */
 a:link {
-	color:#50BFDE;
+	color:#02eefc;
 	text-decoration:underline; /* tret de que s'apliquin estils als links per que tinguin un aspecte exclusiu, es recomanable proporcionar subratllats per facilitar una identificació visual ràpida */
 }
 
@@ -66,59 +66,96 @@ a:hover, a:active, a:focus {
 
 /* ~~ Contenidor d'amplada fixa que envolta el contingut de la pàgina ~~ */
 .container {
-	width: 100%;
-	background: #0D162B;
+	
+	width:100%;
+	background:url(img/banner\ azul.PNG);
 	margin:0 auto; /* el valor automàtic dels costats, juntament a l'amplada, centra el disseny */
+}
+
+.logo {
+	float:left;
+	display: inline-block;
+	margin:3px 7px;
+
 }
 
 /* ~~ Capçalera de la pàgina. S'estén per tota l'amplada del disseny ja que no se li assigna cap amplada especifica ~~ */
 .header {
-	/*~~background:url(img/button-menu.png);
-	background-repeat:repeat-x;~~*/
-	height: 400px;
+	
+	background-repeat:repeat-x;
+	height: 0px;
 }
 
+.title{
+
+	float:left;
+	text-decoration:none;
+	text-align: center;
+	padding: 3px 7px;
+	
+	
+}
+.banner{
+	height: 50px;
+	width:100%;
+	z-index: 1;
+	position: absolute;
+	
+}
+.cryptocurrency{
+	width: 100%;
+	height: 320px;
+	display: block;
+	margin: auto;
+	padding: 10px 10px;
+}
 
 .content {
 
-	padding:10px 125px;
-	width: 80%;
+	padding:0px;
+	width: 100%;
+	margin:0 auto;
 
 }
 
 /* ~~ Aquest selector agrupat afegeix espai a les llistes de l'àrea de .content ~~ */
 .content ul, .content ol { 
-	padding:0 15px 15px 40px; 
+	padding:0 15px 15px 40px;
 }
 
 /* ~~ Estils de la llista de navegació ~~ */
 ul.nav {
 	list-style:none; /* això elimina el marcador de llista */
-	border-top:1px solid rgb(201, 191, 191); /* això crea el marc superior dels vincles (els altres es situen utilitzant un marc inferior en el LI) */
 	margin-bottom:15px; /* això crea l'espai entre la navegació i el contingut posicionat a sota */	     
 }
 .nav li a{
-
+	z-index: 4;
 	font-family:play;
+	font-size: 15px;
 }
 
 ul.nav li {
+
+	    float: right;
 		color: white;
 		text-decoration:underline;
-		border-style:solid;
-		border: 2px solid #50BFDE;
-		background-color: #0D162B;
-		padding: 10px 10px;
-		text-align: center;
+		font-family:play;
+		padding: 8px 8px;
+		text-align: left;
 		text-decoration: none;
 		display:inline-block;
-		margin-left: 84px;
+		margin: left 50px; 
+		border-radius: 10px;
+		z-index: 10;
+		position: relative;
+		
+
 		
 }
-	a:visited, a:active {
-		background-color:#50BFDE;
 
-	  }
+
+
+	
 
 nav ul li{
 
@@ -134,17 +171,20 @@ ul.nav a, ul.nav a:visited { /* al agrupar aquests selectors, s'asegurarà de qu
 	width:160px;  /* l'amplada fa que es pugui fer clic en tot el botó per IE6. Es pot eliminar si no es necessari proporcionar compatibilitat amb IE6. */
 	text-decoration:none;
 	text-align: center;
-	padding:10px 10px;
+	padding: 3px 7px;
 
-	border:2px #50BFDE;
+	border-radius: 8px;
 	border-collapse: collapse;
 	color:white;
-	background-color:#50BFDE;
+	background-color:#18162c;
+	border-bottom-style:groove;
+	border-color:#02eefc;
 }
 
  ul.nav a:hover, ul.nav a:focus { /* això canvia el color de fons i del text tant per usuaris que naveguin amb ratolí com pels que ho facin amb teclat */
-	background:#0D162B;
-	color:#0D162B;
+	background:#18162c;
+	color:#02eefc;
+	border-radius: 8px;
 }
 
 /* ~~ Peu de pàgina ~~ */
@@ -158,9 +198,34 @@ ul.nav a, ul.nav a:visited { /* al agrupar aquests selectors, s'asegurarà de qu
 	clear:both; /* aquesta propietat d'esborrat obliga a .container a conèixer on terminen les columnes i a contenir-les */
 }
 
+.products{
+	display: inline-block;
+	float:left;
+	/*border: 1px solid  black;*/
+	text-align: center;
+
+}
+
+.detail-product {
+	display:inline-block;
+	float:left;
+	text-align: center;
+	padding:20px;
+	margin: 10px;
+	width: 100%;
+
+
+}
+
+.description {
+	color:white;
+
+
+}
+
 .price { /* exemple d'estil que s'aplicaría a la part de detall de producte que correspon al preu */
 	display:inline;
-	color:#1921B1;
+	color:#02eefc;
 	font-weight:bold;
 	font-size:0.9em;
 }
@@ -171,11 +236,11 @@ ul.nav a, ul.nav a:visited { /* al agrupar aquests selectors, s'asegurarà de qu
 	font-weight:200;
 	font-size:0.7em;
 	border:1px solid white;
-	background-color:black;
+	background-color:#02eefc;
 	color:white;
 }
 
 .buy:hover { /* volem mantenir l'efecte hover dels botons fins i tot després de modificar el seu aspecte */
-	background-color:#1921B1;
+	background-color:yellow;
 	cursor:pointer;
 }
