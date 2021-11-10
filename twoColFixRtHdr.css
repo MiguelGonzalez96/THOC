@@ -32,11 +32,13 @@ h1, h2, h3, h4, h5, h6{
 
 p{
 	text-align: justify;
-	color: #fff;
+	color: rgb(187, 187, 187);
 	margin-top:0;	/* la eliminació del marge superior resol un problema que fa que els marges escapin de l'etiqueta div contenidora. El marge inferior restant el mantindrà separat dels elements que segueixin. */
 	padding-right:15px;
 	padding-left:15px; 
 }
+
+p:before{content:attr(type);display:block;margin:28px 0 0;font-size:14px;color:#18162c}
 
 .menu{
 	width:100%;
@@ -65,18 +67,12 @@ a:hover, a:active, a:focus {
 }
 
 /* ~~ Contenidor d'amplada fixa que envolta el contingut de la pàgina ~~ */
-.container {
-	
-	width:100%;
-	background:url(img/banner\ azul.PNG);
-	margin:0 auto; /* el valor automàtic dels costats, juntament a l'amplada, centra el disseny */
-}
+
 
 .logo {
 	float:left;
 	display: inline-block;
 	margin:3px 7px;
-
 }
 
 /* ~~ Capçalera de la pàgina. S'estén per tota l'amplada del disseny ja que no se li assigna cap amplada especifica ~~ */
@@ -147,15 +143,8 @@ ul.nav li {
 		margin: left 50px; 
 		border-radius: 10px;
 		z-index: 10;
-		position: relative;
-		
-
-		
+		position: relative;	
 }
-
-
-
-	
 
 nav ul li{
 
@@ -192,7 +181,7 @@ ul.nav a, ul.nav a:visited { /* al agrupar aquests selectors, s'asegurarà de qu
 
 .footer {
 	padding:10px 0;
-	background:url(img/button-menu.png);
+	background:url(img/banner1.png);
 	background-repeat:repeat-x;
 	height:50px;
 	clear:both; /* aquesta propietat d'esborrat obliga a .container a conèixer on terminen les columnes i a contenir-les */
@@ -237,10 +226,120 @@ ul.nav a, ul.nav a:visited { /* al agrupar aquests selectors, s'asegurarà de qu
 	font-size:0.7em;
 	border:1px solid white;
 	background-color:#02eefc;
-	color:white;
+	color:#18162c;
+	width: 5%;
 }
 
 .buy:hover { /* volem mantenir l'efecte hover dels botons fins i tot després de modificar el seu aspecte */
 	background-color:yellow;
 	cursor:pointer;
+	color:#18162c;
 }
+
+.contact_form{  
+	width: 460px; 
+	height: auto;
+	margin: 80px auto;
+	border-radius: 10px;  
+	padding-top: 30px;
+	padding-bottom: 20px;  
+	background-color: #fbfbfb; 
+	padding-left: 30px; 
+  }
+
+.form{
+	color:white;
+	display: inline-block;
+	float:left;
+	/*border: 1px solid  black;*/
+	text-align: center;
+	padding-right:15px;
+	padding-left:15px;
+	width: 400px; 
+	height: auto;
+	border-radius: 10px;  
+	padding-top: 30px;
+	padding-bottom: 20px;  
+	background-color: #02eefc;
+	margin: 80px 450px; 
+	box-shadow:0 0 40px -10px #18162c;	
+}
+
+
+.button{
+
+	padding:4px;
+	text-transform:uppercase;
+	font-weight:200;
+	font-size:0.7em;
+	border:1px solid white;
+	background-color:#18162c;
+	color:white;
+	width:20%;
+	
+}
+
+.button:hover { /* volem mantenir l'efecte hover dels botons fins i tot després de modificar el seu aspecte */
+	background-color:yellow;
+	cursor:pointer;
+	color:#18162c;
+}
+
+.inlineblock{
+	display:inline-block;
+	float:left;
+	text-align: center;
+	padding:20px;
+	margin: 10px;
+	width: 100%;
+}
+
+input{
+	width:100%;padding:10px;
+	box-sizing:border-box;
+	background:none;
+	outline:none;
+	resize:none;
+	border:0;
+	transition:all .3s;
+	border-bottom:2px solid white;
+	color: #18162c;
+}
+textarea{
+	width:100%;padding:10px;
+	box-sizing:border-box;
+	background:none;
+	outline:none;
+	resize:none;
+	border:0;
+	transition:all .3s;
+	border-bottom:2px solid white;
+	color: #18162c;
+}
+input:focus{border-bottom:2px solid white}
+
+textarea:focus{border-bottom:2px solid white}
+
+iframe{
+
+	margin-left: auto;
+}
+
+.map{
+	margin-left:450px;
+
+}
+
+.aboutus{
+	margin-top:5%;
+	display: inline-block;
+	float:left;
+}
+
+.imagenes{
+	margin-left: 30%;
+
+
+}
+
+
